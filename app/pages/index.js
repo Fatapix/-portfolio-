@@ -1,3 +1,8 @@
+import Layout from "../components/Layout";
 export default function Home() {
-  return <div>Hello Next.JS</div>
+  return (
+    <Layout page="Portfolio - KHIRAT Noha">
+      
+    </Layout>
+  )
 }

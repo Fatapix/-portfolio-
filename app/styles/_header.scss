@@ -22,6 +22,53 @@ header {
             animation: hoverIcon 0.3s;
         }
     }
+
+    nav.navigation-bar {
+        position: relative;
+        height: 50px;
+        background-color: #2D3436;
+
+        padding-left: 150px;
+
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        ul.links {
+            float: left;
+            text-transform: uppercase;
+            .item{
+                float: left;
+                margin-right: 15px;
+                line-height: 50px;
+                font-size: 22px;
+                font-weight: 300;
+                color: #fff;
+                a {
+                    cursor: pointer;
+                    transition: 0.2s ease;
+                }
+            }
+            .item.active::before {
+                content: '';
+                position: absolute;
+                width: 55px;
+                height: 3px;
+                margin-top: 47px;
+                background-color: #bdc3c7;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                animation: fadeSelector 0.4s;
+            }
+
+            .item.active a {
+                transition-duration: 0.5s;
+                color: #0097E6;
+            }
+            .item a:hover {
+                color: #0097E6;
+            }
+        }
+    }
 }
 
 @keyframes hoverIcon {
@@ -33,5 +80,20 @@ header {
     }
     to {
         transform: translateY(2px);
+    }
+}
+
+@keyframes fadeSelector {
+    from {
+        width: 0;
+    }
+    70% {
+        width: 58px;
+    }
+    90% {
+        width: 53px;
+    }
+    to {
+        width: 55px;
     }
 }

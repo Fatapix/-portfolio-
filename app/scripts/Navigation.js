@@ -12,17 +12,19 @@ function changeActiveItem(hash) {
 	}
 }
 
-if ("onhashchange" in window) {
-    window.onhashchange = function () {
-		changeActiveItem(window.location.hash)
-    }
-}
-else {
-    var storedHash = window.location.hash;
-    window.setInterval(function () {
-        if (window.location.hash != storedHash) {
-            storedHash = window.location.hash;
-            changeActiveItem(storedHash)
+if(process.browser) {
+    if ("onhashchange" in window) {
+        window.onhashchange = function () {
+            changeActiveItem(window.location.hash)
         }
-    }, 100);
+    }
+    else {
+        var storedHash = window.location.hash;
+        window.setInterval(function () {
+            if (window.location.hash != storedHash) {
+                storedHash = window.location.hash;
+                changeActiveItem(storedHash)
+            }
+        }, 100);
+    }
 }

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Header from "../components/Header"
 
 export default function Layout({ children, page }) {
     return (
@@ -6,22 +7,8 @@ export default function Layout({ children, page }) {
             <Head>
                 <title>{page}</title>
             </Head>
-            <header className="header">
-                <nav className="socials-bar">
-                    <a href="">
-                        <img src="/icons/icon-github.svg" className="icon" title="GitHub"></img>
-                    </a>
-                    <a href="">
-                        <img src="/icons/icon-mail.svg" className="icon" title="Mail"></img>
-                    </a>
-                    <a href="">
-                        <img src="/icons/icon-linkedin.svg" className="icon" title="LinkedIn"></img>
-                    </a>
-                </nav>
-                <nav className="navigation-bar">
-
-                </nav>
-            </header>
+            <Header></Header>
+            {/* // header */}
             {children}
         </div>
     )

@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "projects",
   "info": {
-    "name": "projects"
+    "name": "projects",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -22,8 +23,8 @@
     "content": {
       "type": "richtext"
     },
-    "screens": {
-      "collection": "file",
+    "screen": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",

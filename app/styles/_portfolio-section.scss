@@ -15,8 +15,8 @@
         
         .card {
             position: relative;
-            width: 450px;
-            height: 300px;
+            width: 350px;
+            height: 200px;
             margin: 60px 30px;
             background-color: #000;
 
@@ -50,7 +50,7 @@
         }
 
         .card:hover .card-content {
-                transform: translateZ(20px) scaleY(1);
+            transform: translateZ(20px) scaleY(1);
         }
     }
 }

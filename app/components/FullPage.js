@@ -9,7 +9,25 @@ export default function FullPage() {
           return (
             <ReactFullpage.Wrapper>
                 <section className="section home-section">
-                    <h1>Home</h1>
+                    <div className="background-filter"></div>
+                    <span className="tags top-tags">&nbsp;&nbsp;&nbsp;&lt;body&gt;</span> 
+
+                    <div className="content">
+                        <div className="container">
+                                <div className="subtitle">Noha Khirat</div>
+                                <div className="title">
+                                    Développeur Web
+                                </div>
+                                <p>Full-Stack - Typescript NodeJS</p>
+                        </div>
+                    </div>
+
+                    <span className="tags bottom-tags">
+                        &nbsp;&nbsp;&nbsp;&lt;/body&gt;
+                        <br/>
+                        &lt;/html&gt;
+                    </span>
+                    <div className="scroll-icon"></div>
                 </section>
                 <section className="section about-section">
                     <h1>About</h1>

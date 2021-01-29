@@ -27,11 +27,37 @@ export default function PortfolioSection() {
 
     return (
         <section className="section portfolio-section">
-            <ul>
+            {/* <ul className="projects-container">
                 {projects.map((project, key) => (
-                    <li key={key}>{project.title}</li>
+                    <li className="item" key={key}>{project.title}</li>
                 ))}
-            </ul>
+            </ul> */}
+            <div className="projects-container">
+                <div className="card">
+                    <div className="card-img">
+                        <img src="/img/design.jpg"></img>
+                    </div>
+                    <div className="card-content">
+                        <h2>Website</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div className="card">
+                    <div className="card-img">
+                        <img src="/img/design.jpg"></img>
+                    </div>
+                    <div className="card-content">
+                        <h2>Website</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }

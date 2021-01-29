@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import FullPage from '../components/FullPage';
+import Navigation from '../scripts/Navigation';
 
 import HomeSection from '../components/sections/HomeSection';
 import AboutSection from '../components/sections/AboutSection';

@@ -31,7 +31,7 @@ export default function PortfolioSection() {
         <section className="section portfolio-section">
             <div className="projects-container">
                 {projects.map((project, key) => (
-                    <Tilt className="tilt" options={{ max : 25 }}>
+                    <Tilt className="tilt" options={{ max : 35 }}>
                         <div className="card">
                             <div className="card-img">
                                 <img src={serverAddresse + project.screen.url}></img>

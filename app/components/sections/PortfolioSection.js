@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Tilt from 'react-tilt';
 
+import PopUp from '../PopUp';
+
 export default function PortfolioSection() {
     const serverAddresse = "http://localhost:1337"
 
@@ -55,6 +57,7 @@ export default function PortfolioSection() {
                     </Tilt>
                 ))}
             </div>
+            {/* <PopUp data={projects} /> */}
         </section>
     )
 }

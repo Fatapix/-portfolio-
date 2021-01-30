@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 
 .section.home-section {
-    background: url("../public/img/background.jpg") no-repeat center;
+    background: url("../../public/img/background.jpg") no-repeat center;
     background-size: cover;
     
     .background-filter {
@@ -10,7 +10,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: #2D3436;
+        background-color: $background-black;
         opacity: 60%;
         z-index: 0;
     }

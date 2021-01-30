@@ -36,12 +36,33 @@
                 right: 50px;
                 background-color: #fff;
 
+                font-size: 12px;
+
                 transform-style: preserve-3d;
 
                 transform: translateZ(20px) scaleY(0);
-                padding: 40px 25px;
+                padding: 15px 25px;
                 transform-origin: top;
                 transition: 0.5s;
+
+                h2 {
+                    font-weight: 500;
+                    margin-bottom: 6px;
+                }
+
+                p {
+                    margin-bottom: 8px;
+                }
+
+                a {
+                    font-size: 10px;
+                    float: right;
+                    color: $font-blue;
+                }
+                a:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
             }
         }
 

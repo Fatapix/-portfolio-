@@ -26,7 +26,7 @@ header {
     nav.navigation-bar {
         position: relative;
         height: 50px;
-        background-color: #2D3436;
+        background-color: $background-black;
 
         padding-left: 150px;
 
@@ -62,10 +62,10 @@ header {
 
             .item.active a {
                 transition-duration: 0.5s;
-                color: #0097E6;
+                color: $font-blue;
             }
             .item a:hover {
-                color: #0097E6;
+                color: $font-blue;
             }
         }
     }

@@ -23,6 +23,14 @@ export default function PortfolioSection() {
             })
     }
 
+    function truncate(str, n, useWordBoundary){
+        if(str.length <= n) { return str; }
+        const subString = str.substr(0, n-1)
+        return (useWordBoundary 
+          ? subString.substr(0, subString.lastIndexOf(" ")) 
+          : subString) + "...";
+      };
+
     useEffect(() => {
         fetchData()
     }, [])
@@ -39,8 +47,9 @@ export default function PortfolioSection() {
                             <div className="card-content">
                                 <h2>{project.title}</h2>
                                 <p>
-                                    {project.content}
+                                    {truncate(project.content, 80, true)}
                                 </p>
+                                <a>En savoir plus...</a>
                             </div>
                         </div>
                     </Tilt>

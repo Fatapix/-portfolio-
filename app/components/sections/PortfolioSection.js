@@ -27,11 +27,17 @@ export default function PortfolioSection() {
 
     function truncate(str, n, useWordBoundary){
         if(str.length <= n) { return str; }
+
         const subString = str.substr(0, n-1)
+        
         return (useWordBoundary 
           ? subString.substr(0, subString.lastIndexOf(" ")) 
-          : subString) + "...";
-      };
+          : subString) + "..."
+    }
+
+    function openPopUp(key) {
+        console.log(key)
+    }
 
     useEffect(() => {
         fetchData()
@@ -51,7 +57,7 @@ export default function PortfolioSection() {
                                 <p>
                                     {truncate(project.content, 80, true)}
                                 </p>
-                                <a>En savoir plus...</a>
+                                <a onClick={() => openPopUp(key)}>En savoir plus...</a>
                             </div>
                         </div>
                     </Tilt>

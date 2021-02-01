@@ -35,8 +35,8 @@ export default function PortfolioSection() {
           : subString) + "..."
     }
 
-    function openPopUp(key) {
-        console.log(key)
+    function openPopUp(data) {
+        console.log(data)
     }
 
     useEffect(() => {
@@ -46,8 +46,8 @@ export default function PortfolioSection() {
     return (
         <section className="section portfolio-section">
             <div className="projects-container">
-                {projects.map((project, key) => (
-                    <Tilt className="tilt" options={{ max : 35 }}>
+                {projects.map((project) => (
+                    <Tilt className="tilt" options={{ max : 35 }} key={project.id}>
                         <div className="card">
                             <div className="card-img">
                                 <img src={serverAddresse + project.screen.url}></img>
@@ -57,13 +57,12 @@ export default function PortfolioSection() {
                                 <p>
                                     {truncate(project.content, 80, true)}
                                 </p>
-                                <a onClick={() => openPopUp(key)}>En savoir plus...</a>
+                                <a onClick={() => openPopUp(project)}>En savoir plus...</a>
                             </div>
                         </div>
                     </Tilt>
                 ))}
             </div>
-            {/* <PopUp data={projects} /> */}
         </section>
     )
 }

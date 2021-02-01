@@ -8,7 +8,6 @@ export default function Layout({ children, page }) {
                 <title>{page}</title>
             </Head>
             <Header></Header>
-            {/* // header */}
             {children}
         </div>
     )

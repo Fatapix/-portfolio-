@@ -13,18 +13,18 @@ export default function Header() {
             </a>
         </nav>
         <nav className="navigation-bar">
-            <ul class="links">
-                <li class="item active">
-                    <a href="#home-section" class="link">Accueil</a>
+            <ul className="links">
+                <li className="item active">
+                    <a href="#home-section" className="link">Accueil</a>
                 </li>
-                <li class="item">
-                    <a href="#about-section" class="link">A propos</a>
+                <li className="item">
+                    <a href="#about-section" className="link">A propos</a>
                 </li>
-                <li class="item">
-                    <a href="#portfolio-section" class="link">Portfolio</a>
+                <li className="item">
+                    <a href="#portfolio-section" className="link">Portfolio</a>
                 </li>
-                <li class="item">
-                    <a href="#contacts-section" class="link">Contacts</a>
+                <li className="item">
+                    <a href="#contacts-section" className="link">Contacts</a>
                 </li>
             </ul>
         </nav>

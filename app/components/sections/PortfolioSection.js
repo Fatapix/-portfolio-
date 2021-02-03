@@ -1,29 +1,12 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Tilt from 'react-tilt';
 
 import PopUp from '../PopUp';
 
-export default function PortfolioSection() {
-    const serverAddresse = "http://localhost:1337"
+export default function PortfolioSection({ data }) {
 
-    const [projects, setProjects] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(false)
-
-    const fetchData = async() => {
-        await axios.get(serverAddresse +'/projects')
-            .then(res => {
-                setError(false)
-                setProjects(prevState => [...prevState, ...res.data])
-            })
-            .catch(() => {
-                setError(true)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    }
+    const { API_URL } = process.env
+    const projects = data
 
     function truncate(str, n, useWordBoundary){
         if(str.length <= n) { return str; }
@@ -39,10 +22,6 @@ export default function PortfolioSection() {
         console.log(data)
     }
 
-    useEffect(() => {
-        fetchData()
-    }, [])
-
     return (
         <section className="section portfolio-section">
             <div className="projects-container">
@@ -50,7 +29,7 @@ export default function PortfolioSection() {
                     <Tilt className="tilt" options={{ max : 35 }} key={project.id}>
                         <div className="card">
                             <div className="card-img">
-                                <img src={serverAddresse + project.screen.url}></img>
+                                <img src={API_URL + project.screen.url}></img>
                             </div>
                             <div className="card-content">
                                 <h2>{project.title}</h2>

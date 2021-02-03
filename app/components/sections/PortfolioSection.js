@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Tilt from 'react-tilt';
 
 import PopUp from '../PopUp';
@@ -9,7 +8,7 @@ export default function PortfolioSection({ data }) {
     const projects = data
 
     function truncate(str, n, useWordBoundary){
-        if(str.length <= n) { return str; }
+        if(str.length <= n) { return str }
 
         const subString = str.substr(0, n-1)
         

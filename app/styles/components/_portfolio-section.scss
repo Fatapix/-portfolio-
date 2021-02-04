@@ -1,23 +1,25 @@
 .section.portfolio-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 90px;
     //min-height: 100vh;
 
     .projects-container {
         position: relative;
+        height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding: 50px 0;
+        padding: 50px 20px;
 
         transform-style: preserve-3d;
+
+        .tilt {
+            margin-left: 30px;
+            height: min-content;
+        }
         
         .card {
             position: relative;
             width: 350px;
             height: 200px;
-            margin: 60px 30px;
             background-color: #000;
 
             transform-style: preserve-3d;
@@ -70,7 +72,7 @@
             box-shadow: 0 50px 80px rgba(0, 0, 0, .2);
         }
 
-        .tilt:hover .card-content {
+        .card:hover .card-content {
             transform: translateZ(20px) scaleY(1);
         }
     }
